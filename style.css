@@ -71,16 +71,32 @@ footer {
     text-align:center;
     padding: 100px;
 }
-.dw {
-    width: 150px;
-    margin-top: 10px;
-}
+
+
 .content {
-    display: flex; 
-    align-items: center;
-    gap:20px;
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+}
+.content p {
+    flex: 1; 
+}
+.dw {
+    width: 40%; 
+    max-width: 150px;
 }
 
+@media (max-width: 768px) {
+    .content {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .dw {
+        width: 100%;      
+        max-width: 300px; 
+        margin-top: 10px;
+    }
+}
 
 .hightlight{
     color: #ff0404;
@@ -90,3 +106,19 @@ footer {
 ol{
     list-style-position:inside ;
 }
+@media (max-width: 768px) {
+    .content {
+        flex-direction: row; 
+        align-items: flex-start;
+        overflow-x: auto;
+        gap: 10px;
+    }
+    .dw {
+        width: 150px;  
+        height: auto;
+        flex-shrink: 0; 
+    }
+}
+
+
+
